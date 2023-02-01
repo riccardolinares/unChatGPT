@@ -1,0 +1,12 @@
+@tailwind base;
+@layer base {
+  img {
+    @apply inline-block;
+  }
+}
+@tailwind components;
+@tailwind utilities;
+
+#__next {
+  min-height: 100%;
+}
