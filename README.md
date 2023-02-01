@@ -2,7 +2,7 @@
 
 # unChatGPT
 
-unChatGPT is a clone of ChatGPT is an open source natural language processing (NLP) tool developed by OpenAI. It provides a chatbot that can interact with users in a natural language conversation.
+unChatGPT is a powerful tool that uses the OpenAI API to create a chatbot-like chat experience. It allows users to converse with an AI-based chatbot, similar to ChatGPT, but without the need to wait in a queue or have limited access. unChatGPT is designed to provide an easy and efficient way to chat with an AI-based chatbot in a fast and intuitive way.
 
 ## Getting Started
 
@@ -10,7 +10,8 @@ unChatGPT is a clone of ChatGPT is an open source natural language processing (N
 
 To get started with unChatGPT, clone the repository and install the dependencies:
 
-```bash git clone
+```
+git clone
 cd unChatGPT
 npm install
 ```
@@ -23,7 +24,8 @@ unChatGPT uses the OpenAI API to generate responses. To use the OpenAI API, you 
 
 Copy the `.env.sample` file to `.env`
 
-```bash cp .env.sample .env
+```
+cp .env.sample .env
 
 ```
 
