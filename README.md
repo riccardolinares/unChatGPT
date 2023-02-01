@@ -1,4 +1,4 @@
-![alt text](https://github.com/riccardolinares/unChatGPT/blob/main/unChatGPT.png?raw=true)
+<div align="center"><img src="https://github.com/riccardolinares/unChatGPT/blob/main/unChatGPT.png?raw=true" width="50%"></div>
 
 # unChatGPT
 
