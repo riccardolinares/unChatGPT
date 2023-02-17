@@ -93,14 +93,14 @@ export default function Home() {
               <div key={`message-${index.toString()}`}>
                 <div className="flex flex-col w-full space-y-2 py-3 px-32 border-b-2">
                   <div className="text-sm font-medium text-gray-700">You</div>
-                  <div className="message-user text-gray-700 mx-10">
-                    {item.value}
+                  <div className="message-user text-gray-700 mx-10 whitespace-pre-wrap">
+                    <p>{item.value.trim()}</p>
                   </div>
                 </div>
                 <div className="flex flex-col w-full space-y-2 py-3 px-32 border-b-2">
                   <div className="text-sm font-medium text-gray-700 ">Bot</div>
-                  <div className="message-bot text-gray-500 mx-10">
-                    {item.completion}
+                  <div className="message-bot text-gray-500 mx-10 whitespace-pre-wrap">
+                    <p>{item.completion.trim()}</p>
                   </div>
                 </div>
               </div>

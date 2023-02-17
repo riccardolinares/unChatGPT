@@ -21,9 +21,11 @@ export default async function handler(
     max_tokens: parseInt(process.env.OPENAI_MAX_TOKENS || "100"),
   });
 
+  console.log(completion.data);
+
   console.log({
-    value: req.body.text,
-    completion: completion.data.choices[0].text,
+    value: req.body.text?.replace(/\n/g, "\\n"),
+    completion: completion.data.choices[0].text?.replace(/\n/g, "\\n"),
   });
 
   res.status(200).json({ result: completion.data });
