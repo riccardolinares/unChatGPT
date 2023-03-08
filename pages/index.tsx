@@ -39,7 +39,11 @@ export default function Home() {
         });
 
         const data = await response.json();
-        const completion = data.result.choices[0].text;
+        const model = process.env.OPENAI_MODEL || "gpt-3.5-turbo";
+        const completion =
+          model === "gpt-3.5-turbo"
+            ? data.result.choices[0].message?.content
+            : data.result.choices[0].text;
         setValue("");
 
         // Upgrade the total tokens used by the number of tokens used in this request.
@@ -57,6 +61,10 @@ export default function Home() {
       }
     },
     [value]
+  );
+
+  const pricePerToken = parseFloat(
+    process.env.OPENAI_PRICE_PER_TOKEN || "0.000002"
   );
 
   return (
@@ -81,7 +89,7 @@ export default function Home() {
             <div className="text-sm text-blue-600 ">
               <p>
                 <span className="font-bold">Usage:</span> {usage.total_tokens}{" "}
-                tokens [ € {(usage.total_tokens * 0.02) / 1000}]
+                tokens [ € {usage.total_tokens * pricePerToken}]
               </p>
             </div>
           </div>
